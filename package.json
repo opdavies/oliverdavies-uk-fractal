@@ -1,0 +1,19 @@
+{
+  "name": "oliverdavies-uk",
+  "version": "0.1.0",
+  "scripts": {
+    "fractal:start": "fractal start --sync",
+    "fractal:build": "fractal build",
+    "postcss:build": "postcss assets/css/tailwind.pcss -o public/dist/css/tailwind.css",
+    "postcss:watch": "postcss assets/css/tailwind.pcss -o public/dist/css/tailwind.css --watch"
+  },
+  "devDependencies": {
+    "@frctl/fractal": "^1.5.6",
+    "@frctl/twig": "^1.2.8",
+    "@tailwindcss/jit": "^0.1.8",
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.2.8",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.0.4"
+  }
+}
