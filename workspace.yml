@@ -1,0 +1,44 @@
+workspace('oliverdavies-uk-fractal'):
+  description: Fractal for oliverdavies.uk.
+
+command('cli %'):
+  env:
+    COMPOSE_PROJECT_NAME: = @('namespace')
+  exec: |
+    #!bash|=
+    passthru docker-compose run --rm cli ={ input.argument('%') }
+
+command('destroy'):
+  env:
+    COMPOSE_PROJECT_NAME: = @('namespace')
+  exec: |
+    #!bash|=
+    run docker-compose down --remove-orphans --volumes
+
+command('disable'):
+  env:
+    COMPOSE_PROJECT_NAME: = @('namespace')
+  exec: |
+    #!bash|=
+    run docker-compose down --remove-orphans
+
+command('enable'):
+  env:
+    COMPOSE_PROJECT_NAME: = @('namespace')
+  exec: |
+    #!bash|=
+    passthru docker-compose up -d --build
+
+command('logs %'):
+  env:
+    COMPOSE_PROJECT_NAME: = @('namespace')
+  exec: |
+    #!bash|=
+    passthru docker-compose logs ={ input.argument('%') }
+
+command('ps'):
+  env:
+    COMPOSE_PROJECT_NAME: = @('namespace')
+  exec: |
+    #!bash|=
+    passthru docker-compose ps
