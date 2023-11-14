@@ -48,3 +48,15 @@ fractal.web.theme(
     }
   })
 );
+
+fractal.components.set('default.context', {
+  avatarUrl: 'https://avatars.githubusercontent.com/u/339813?s=460&u=21019981a38c5298cde632294df2e4f12d3bee6b&v=4',
+  menuLinks: [
+    'About',
+    'Press Info',
+    'Service',
+    'Talks',
+    'Podcast',
+    'Daily List',
+  ],
+});
