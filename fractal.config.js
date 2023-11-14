@@ -29,3 +29,22 @@ fractal.components.set('path', path.join(__dirname, 'components'));
 fractal.docs.set('path', path.join(__dirname, 'docs'));
 
 fractal.web.set('static.path', path.join(__dirname, 'public'));
+
+fractal.web.theme(
+  mandelbrot({
+    format: 'yaml',
+    lang: 'en-GB',
+    nav: [
+      'search',
+      'docs',
+      'components',
+      'information',
+    ],
+    skin: {
+      name: 'default',
+      accent: '#114b71',
+      complement: '#fff',
+      links: '#114b71',
+    }
+  })
+);
