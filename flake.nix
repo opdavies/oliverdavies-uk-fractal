@@ -14,7 +14,7 @@
 
       perSystem = { config, self', inputs', pkgs, system, ... }: {
         devshells.default = {
-          packages = with pkgs; [ "awscli" "nodejs_20" ];
+          packages = with pkgs; [ "awscli" "nodejs_20" "nodePackages.pnpm" ];
         };
       };
     };
